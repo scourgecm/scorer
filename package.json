@@ -1,0 +1,22 @@
+{
+  "name": "scorer",
+  "version": "1.0.0",
+  "description": "Simple scoring tool for Scrabbles",
+  "main": "app/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scourgecm/scorer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scourgecm/scorer/issues"
+  },
+  "homepage": "https://github.com/scourgecm/scorer#readme",
+  "devDependencies": {
+    "bower": "^1.8.0"
+  }
+}
