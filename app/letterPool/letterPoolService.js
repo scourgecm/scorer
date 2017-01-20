@@ -2,10 +2,9 @@
     'use strict';
 
     angular
-        .module('scorer')
+        .module('letterPool')
         .service('LetterPoolService', LetterPoolService);
 
-    // LetterPoolService.inject = ['dependency1'];
     function LetterPoolService() {
         var self = this;
 

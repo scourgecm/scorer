@@ -15,8 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'app/**/*.js',
-      'app/**/*spec.js'
+      {pattern: 'app/bower_components/angular/angular.js', watched: false},
+      {pattern: 'node_modules/angular-mocks/angular-mocks.js', watched: false},
+      'app/letterPool/*.js',
+      'app/letterPool/*.spec.js'
     ],
 
 

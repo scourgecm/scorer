@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('scorer')
+        .module('letterPool')
         .controller('LetterPoolController', LetterPoolController);
 
     LetterPoolController.inject = ['LetterPoolService'];

@@ -2,6 +2,7 @@
     'use strict';
 
     angular.module('scorer', [
-        'ngMaterial'
+        'ngMaterial',
+        'letterPool'
     ]);
 })();
