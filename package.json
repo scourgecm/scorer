@@ -4,19 +4,26 @@
   "description": "Simple scoring tool for Scrabbles",
   "main": "app/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js",
+    "postinstall": "bower install",
+    "start": "http-server -a localhost -p 8000 -c-1 ./app"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scourgecm/scorer.git"
   },
-  "author": "",
+  "author": "scourgecm",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scourgecm/scorer/issues"
   },
   "homepage": "https://github.com/scourgecm/scorer#readme",
   "devDependencies": {
-    "bower": "^1.8.0"
+    "angular-mocks": "^1.6.1",
+    "bower": "^1.8.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.1.0"
   }
 }

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="scorer">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bower_components/angular-material/angular-material.css" rel="stylesheet">
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="index.js"></script>
+    <script src="letterPool/letterPoolService.js"></script>
+    <script src="letterPool/letterPoolController.js"></script>
+</head>
+
+<body>
+    <main>
+        <md-content layout-wrap layout="column" layout-align="space-around stretch">
+            <div ng-controller="LetterPoolController as poolCtrl">
+                <md-card>
+                    <!--<img src="card-image.png" class="md-card-image" alt="image caption">-->
+                    <md-card-content>
+                        <h2>{{poolCtrl.howMuch}}</h2>
+                        <p>Letters left</p>
+                    </md-card-content>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button>Action 1</md-button>
+                        <md-button>Action 2</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </md-content>
+    </main>
+</body>
+
+</html>

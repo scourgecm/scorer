@@ -5,6 +5,9 @@
   "license": "ISC",
   "homepage": "https://github.com/scourgecm/scorer",
   "private": true,
+  "authors": [
+    "scourgecm"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,6 +16,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.6.1"
+    "angular": "^1.6.1",
+    "angular-material": "^1.1.1",
+    "angular-route": "1.6.1"
   }
 }
