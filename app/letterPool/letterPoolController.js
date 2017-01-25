@@ -10,16 +10,20 @@
         var self = this;
         self.howMuch = LetterPoolService.howMuch();
         self.char = "";
-        self.letter = undefined;
+        self.letter = null;
 
         self.getLetter = getLetter;
 
-        getLetter(self.char);
-
         ////////////////////////////
 
-        function getLetter(char) {
-            self.letter = LetterPoolService.getLetter(char);
+        function getLetter() {
+            self.char = self.char.toUpperCase();
+            self.letter = LetterPoolService.getLetter(self.char);
+            
+            var regex = /([a-zA-Z])/;
+            if (regex.test(self.char)){
+                self.letter = null;
+            }
         }
     }
 })();

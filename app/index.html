@@ -35,7 +35,7 @@
                     </md-card-actions>
                 </md-card>
                 <md-card>
-                    <md-card-content ng-hide="poolCtrl.letter">
+                    <md-card-content ng-show="poolCtrl.letter">
                         <h2>{{poolCtrl.letter.char}}</h2>
                         <p>{{poolCtrl.letter.pnts}}</p>
                         <p>{{poolCtrl.letter.q}} left</p>
@@ -43,9 +43,15 @@
                     <md-card-actions>
                         <md-input-container md-no-float>
                             <input type="text" name="char" placeholder="Enter a char" 
-                            ng-maxlength="1" ng-model="poolCtrl.char"
-                            ng-change="poolCtrl.getLetter(poolCtrl.char)">
+                            ng-maxlength="1" ng-model="poolCtrl.char">
                         </md-input-container>
+                        <br>
+                        <md-button id="getLetter"
+                                   class="md-primary"
+                                   ng-click="poolCtrl.getLetter()"
+                                   aria-label="Busca mi letra!">
+                                   Busca mi letra!
+                        </md-button>
                     </md-card-actions>
                 </md-card>
             </div>

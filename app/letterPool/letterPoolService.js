@@ -29,7 +29,7 @@
                 return item.char == char;
             });
 
-            if(index = -1){
+            if(index == -1){
                 return new Letter(howMuch(), "Left", 0);
             }
 
