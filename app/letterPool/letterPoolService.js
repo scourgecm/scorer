@@ -9,8 +9,47 @@
         var self = this;
 
         self.howMuch = howMuch;
-        self.pool =
-            [ new Letter("0", 2, 0),
+        self.getLetter = getLetter;
+        self.resetPool = resetPool;
+        self.pool = new Pool();
+
+        ////////////////
+
+        function howMuch() {
+            var total = 0;
+            angular.forEach(self.pool, function (item, index) {
+                total += item.q;
+            })
+            return total;
+        }
+
+        function getLetter(char) {
+
+            var index = self.pool.findIndex(function (item) {
+                return item.char == char;
+            });
+
+            if(index = -1){
+                return new Letter(howMuch(), "Left", 0);
+            }
+
+            if (self.pool[index].q > 0) {
+                self.pool[index].q--;
+            }
+
+            return self.pool[index];
+        }
+
+        function resetPool() {
+            self.pool = new Pool();
+        }
+
+        function Letter(char, q, pnts) {
+            return { 'char': char, 'q': q, 'pnts': pnts }
+        }
+
+        function Pool() {
+            return [new Letter("0", 2, 0),
             new Letter('A', 12, 1),
             new Letter('E', 12, 1),
             new Letter('I', 6, 1),
@@ -40,19 +79,6 @@
             new Letter('X', 1, 8),
             new Letter('Z', 1, 10)
             ];
-
-        ////////////////
-
-        function Letter(char, q, pnts) {
-            return { 'char': char, 'q': q, 'pnts': pnts }
-        }
-
-        function howMuch() {
-            var total = 0;
-            angular.forEach(self.pool, function (item, index) {
-                total += item.q;
-            })
-            return total;
         }
     }
 })();

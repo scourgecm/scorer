@@ -8,15 +8,18 @@
     LetterPoolController.inject = ['LetterPoolService'];
     function LetterPoolController(LetterPoolService) {
         var self = this;
-        self.howMuch = undefined;
+        self.howMuch = LetterPoolService.howMuch();
+        self.char = "";
+        self.letter = undefined;
 
-        activate();
+        self.getLetter = getLetter;
 
-        ////////////////
+        getLetter(self.char);
 
-        function activate() {
-            self.howMuch = LetterPoolService.howMuch();
-            // self.howMuch = LetterPoolService.pool;
+        ////////////////////////////
+
+        function getLetter(char) {
+            self.letter = LetterPoolService.getLetter(char);
         }
     }
 })();
